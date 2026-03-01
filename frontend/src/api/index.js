@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+// In production, VITE_API_URL points to the deployed backend (e.g., https://your-backend.onrender.com/api)
+// In development, '/api' is proxied to localhost:5000 by Vite
 const API = axios.create({
-    baseURL: '/api'
+    baseURL: import.meta.env.VITE_API_URL || '/api'
 });
 
 // Attach token to all requests
