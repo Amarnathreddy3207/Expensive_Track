@@ -173,7 +173,7 @@ const Dashboard = () => {
                                         </Pie>
                                         <Tooltip
                                             formatter={(value) => formatCurrency(value)}
-                                            contentStyle={{ background: '#0f1525', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', color: '#f1f5f9' }}
+                                            contentStyle={{ background: '#1a2332', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '6px', color: '#e2e8f0', fontSize: '0.85rem' }}
                                         />
                                     </PieChart>
                                 </ResponsiveContainer>
@@ -205,12 +205,12 @@ const Dashboard = () => {
                         <div className="chart-container">
                             <ResponsiveContainer width="100%" height="100%">
                                 <LineChart data={trendData}>
-                                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
+                                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.08)" vertical={false} />
                                     <XAxis dataKey="name" stroke="#475569" tick={{ fontSize: 12 }} />
                                     <YAxis stroke="#475569" tick={{ fontSize: 12 }} tickFormatter={v => `₹${(v / 1000).toFixed(0)}k`} />
                                     <Tooltip
                                         formatter={(value) => [formatCurrency(value), 'Spent']}
-                                        contentStyle={{ background: '#0f1525', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', color: '#f1f5f9' }}
+                                        contentStyle={{ background: '#1a2332', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '6px', color: '#e2e8f0', fontSize: '0.85rem' }}
                                     />
                                     <Line type="monotone" dataKey="amount" stroke="#0ea5e9" strokeWidth={2} dot={{ fill: '#0ea5e9', r: 4 }} activeDot={{ r: 6 }} />
                                 </LineChart>

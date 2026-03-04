@@ -2,10 +2,10 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const NAV_ITEMS = [
-    { path: '/', label: 'Dashboard', emoji: '📊' },
-    { path: '/expenses', label: 'Expenses', emoji: '💳' },
-    { path: '/add-expense', label: 'Add Expense', emoji: '➕' },
+    { path: '/dashboard', label: 'Dashboard', emoji: '📊' },
     { path: '/budget', label: 'Budget', emoji: '🎯' },
+    { path: '/add-expense', label: 'Add Expense', emoji: '➕' },
+    { path: '/expenses', label: 'Expenses', emoji: '💳' },
     { path: '/analytics', label: 'Analytics', emoji: '📈' },
 ];
 
@@ -39,7 +39,6 @@ const Sidebar = () => {
                     <NavLink
                         key={item.path}
                         to={item.path}
-                        end={item.path === '/'}
                         className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
                     >
                         <span style={{ fontSize: '1rem' }}>{item.emoji}</span>

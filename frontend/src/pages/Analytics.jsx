@@ -63,7 +63,7 @@ const Analytics = () => {
 
             {/* Total Summary Card */}
             {summary && (
-                <div className="stat-card" style={{ marginBottom: 'var(--gap-xl)', background: 'var(--accent-gradient)' }}>
+                <div className="stat-card" style={{ marginBottom: 'var(--gap-xl)', background: 'linear-gradient(135deg, #1e3a5f, #2a4a6b)' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                         <div>
                             <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', marginBottom: '4px' }}>
@@ -97,12 +97,12 @@ const Analytics = () => {
                         <div style={{ height: 300 }}>
                             <ResponsiveContainer width="100%" height="100%">
                                 <BarChart data={barData} margin={{ top: 5, right: 20, left: 20, bottom: 5 }}>
-                                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
+                                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.08)" vertical={false} />
                                     <XAxis dataKey="name" tick={{ fontSize: 11, fill: '#94a3b8' }} tickLine={false} />
                                     <YAxis tick={{ fontSize: 11, fill: '#94a3b8' }} tickLine={false} tickFormatter={v => `₹${(v / 1000).toFixed(0)}k`} />
                                     <Tooltip
                                         formatter={(value) => [formatCurrency(value), 'Amount']}
-                                        contentStyle={{ background: '#0f1525', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', color: '#f1f5f9' }}
+                                        contentStyle={{ background: '#1a2332', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '6px', color: '#e2e8f0', fontSize: '0.85rem' }}
                                     />
                                     <Bar dataKey="value" radius={[6, 6, 0, 0]}>
                                         {barData.map((entry, i) => (

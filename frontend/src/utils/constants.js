@@ -29,17 +29,17 @@ export const CATEGORY_EMOJIS = {
 };
 
 export const CATEGORY_COLORS = {
-    'Food & Dining': '#f59e0b',
-    'Transport': '#3b82f6',
-    'Shopping': '#ec4899',
-    'Bills & Utilities': '#ef4444',
-    'Entertainment': '#8b5cf6',
-    'Health & Medical': '#10b981',
-    'Education': '#06b6d4',
-    'Groceries': '#84cc16',
-    'Subscriptions': '#f97316',
-    'Rent & Housing': '#6366f1',
-    'Other': '#6b7280'
+    'Food & Dining': '#5b9bd5',
+    'Transport': '#7ec8a4',
+    'Shopping': '#f4a582',
+    'Bills & Utilities': '#e07b7b',
+    'Entertainment': '#9c8ec1',
+    'Health & Medical': '#6dbfb8',
+    'Education': '#82b1d4',
+    'Groceries': '#a8c97f',
+    'Subscriptions': '#d4a574',
+    'Rent & Housing': '#8a8cc2',
+    'Other': '#9ca3af'
 };
 
 export const PAYMENT_EMOJIS = {

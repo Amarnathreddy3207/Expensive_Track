@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Sidebar from './components/Sidebar';
+import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
 import Expenses from './pages/Expenses';
 import AddExpense from './pages/AddExpense';
@@ -37,9 +38,10 @@ const App = () => {
         <AuthProvider>
             <BrowserRouter>
                 <Routes>
+                    <Route path="/" element={<Landing />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
-                    <Route path="/" element={
+                    <Route path="/dashboard" element={
                         <ProtectedRoute>
                             <AppLayout><Dashboard /></AppLayout>
                         </ProtectedRoute>
